@@ -7,13 +7,11 @@ const userSchema = new mongoose.Schema(
     firstName: {
       type: String,
       required: true,
-      unique: true,
       trim: true,
     },
     lastName: {
       type: String,
       required: true,
-      unique: true,
       trim: true,
     },
     email: {
@@ -32,7 +30,6 @@ const userSchema = new mongoose.Schema(
     password: {
       type: String,
       required: [true, "please provide your email"],
-      unique: true,
       minlength: 6,
     },
   },
