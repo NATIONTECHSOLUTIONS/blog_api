@@ -20,18 +20,14 @@ const blogSchema = new mongoose.Schema(
       trim: true,
       required: true,
     },
-    dateofContent: {
+    date: {
       type: String,
       trim: true,
       required: true,
     },
     image: {
       type: String,
-      required: true,
-    },
-    blogBody:{
-      type: String,
-      require: true,
+      required: false,
       trim: true,
     },
   },

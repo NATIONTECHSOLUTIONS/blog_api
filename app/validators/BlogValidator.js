@@ -1,15 +1,13 @@
 "use strict";
-const joi = require("joi");
+const Joi = require("joi");
 const { validate } = require("../utilities/helper");
 
 exports.createBlog = async (body) => {
   let schema = {
-    blogTitle: joi.string().required().trim(),
-    author: joi.string().required().trim(),
-    dateofContent: joi.string().required().trim(),
-    blogContent: joi.string().required().trim(),
-    blogCbody: joi.string().required().trim(),
-    image: joi.string().uri().optional(""),
+    blogTitle: Joi.string().required().trim(),
+    author: Joi.string().required().trim(),
+    date: Joi.string().required(),
+    blogBody: Joi.string().required().trim(),
   };
   return validate(schema, body);
 };
